@@ -1,4 +1,4 @@
-# anonymize-sales
+# sales-anonymizer
 
 A Python script to anonymize Depop sales CSVs and export the results to Google Sheets. It removes personally identifiable information (PII) and hashes sensitive columns.
 
