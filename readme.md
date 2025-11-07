@@ -16,16 +16,16 @@ A Python script to anonymize Depop sales CSVs and export the results to Google S
 ## Requirements
 
 - Python 3.8+  
-- Packages listed in `requirements.txt`:
+- Packages listed in `requirements.txt`
 
 ## To use:
 1. Clone the repository
 2. Install dependencies:
 
-pip install -r requirements.txt
+- pip install -r requirements.txt
 
 3. Create a `.env` file with your credentials:
 
-CRED_FILE=path/to/service_account.json
+- CRED_FILE=path/to/service_account.json
 
-SPREADSHEET_ID=your_google_sheet_id
+- SPREADSHEET_ID=your_google_sheet_id
