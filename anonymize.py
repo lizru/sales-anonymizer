@@ -47,6 +47,9 @@ def anonymize_sales_data(df, pii_columns):
     df.drop(columns=pii_columns, errors='ignore', inplace=True)
     return df
 
+
+
+
 def hash_pii_columns(df, pii_columns):
     # hashes PII columns
     df = df.copy()
@@ -78,11 +81,14 @@ def upload_to_google_sheet(df, sheet_id, creds_file=CRED_FILE):
 def main():
     df = read_sales_data(choose_file())
     df = clean_df(df)
-    pii_columns_to_remove = ["Name", "Address Line 1", "Address Line 2", "City", "Post Code"]
-    df = anonymize_sales_data(df, pii_columns_to_remove)
 
-    hash_columns = ["Buyer"]
-    df = hash_pii_columns(df, hash_columns)
+    pii_columns_to_remove = ["Name", "Address Line 1", "Address Line 2", "City", "Post Code", "Buyer"]
+    if pii_columns_to_remove:
+        df = anonymize_sales_data(df, pii_columns_to_remove)
+
+    hash_columns = []
+    if hash_columns
+        df = hash_pii_columns(df, hash_columns)
 
 
     upload_to_google_sheet(df, sheet_id=SPREADSHEET_ID, creds_file=CRED_FILE)
