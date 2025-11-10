@@ -87,7 +87,7 @@ def main():
         df = anonymize_sales_data(df, pii_columns_to_remove)
 
     hash_columns = []
-    if hash_columns
+    if hash_columns:
         df = hash_pii_columns(df, hash_columns)
 
 
